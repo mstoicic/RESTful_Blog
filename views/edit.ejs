@@ -1,0 +1,42 @@
+<% include ./partials/header %>
+
+
+<div id="create" class="ui main text container segment center aligned">
+    <div class="ui huge header center aligned"><i class="edit outline icon"></i>Edit your Blog Post</div>
+    <div class="ui hidden divider"></div>
+    <div class="ui hidden divider"></div>
+    <!-- Method override using method-override -> ?_method=PUT -->
+    <form class="ui form" action="/blogs/<%= blog._id %>?_method=PUT" method="POST">
+
+      <div class="ui fluid labeled input field">
+          <div id="form_label" class="ui label">
+            Title
+          </div>
+          <input type="text" name="blog[title]" id="title" value="<%= blog.title %>" required>
+      </div>
+      <div class="ui hidden divider"></div>
+      <div class="ui fluid labeled input field">
+          <div id="form_label" class="ui label">
+              Image URL
+            </div>
+        <input type="text" name="blog[image]" id="image" value="<%= blog.image %>">
+      </div>
+      <div class="ui hidden divider"></div>
+      <div class="ui fluid labeled input field">
+          <div id="form_label" class="ui label">
+              Content
+            </div>
+        <textarea name="blog[body]" id="content" rows="7" required><%= blog.body %></textarea>
+      </div>
+      <div class="ui hidden divider"></div>
+
+      <div class="ui buttons">
+        <a class="ui button" href="/blogs">Cancel</a>
+        <div class="or"></div>
+        <input class="ui primary button" type="submit" value="Save">
+      </div>
+      
+    </form>
+  </div>
+
+<% include ./partials/footer %>

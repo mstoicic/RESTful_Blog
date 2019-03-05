@@ -1,0 +1,49 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #DADADA;
+  padding-top: 6rem;
+}
+
+i.icon.main {
+  font-size: 2.5em;
+}
+
+.ui.huge.header.center.aligned {
+  margin: 3rem 0;
+}
+
+.ui.label {
+  margin-bottom: 1rem;
+}
+
+#form_label {
+  width:15%;
+}
+
+/* Responsive quary */
+@media(max-width:470px) {
+  .ui.huge.header.center.aligned {
+    margin: 1rem 0;
+  }
+  .left.floated.column {
+    margin-right: 9rem !important;
+  }
+  .right.floated.column.right.aligned {
+    margin-left: 0;
+  }
+  .ui.negative.button {
+    margin: 0;
+  }
+  #form_label {
+    width:25%;
+  }
+}

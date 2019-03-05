@@ -1,0 +1,37 @@
+<% include ./partials/header %>
+
+<div id="create" class="ui main text container segment center aligned">
+  <div class="ui huge header center aligned">Create New Blog Post</div>
+  <div class="ui hidden divider"></div>
+
+  <form class="ui form" action="/blogs" method="POST">
+    <div class="ui fluid labeled input field">
+        <div id="form_label" class="ui label">
+          Title
+        </div>
+        <input type="text" name="blog[title]" id="title" required>
+    </div>
+    <div class="ui hidden divider"></div>
+    <div class="ui fluid labeled input field">
+        <div id="form_label" class="ui label">
+            Image URL
+          </div>
+      <input type="text" name="blog[image]" id="image">
+    </div>
+    <div class="ui hidden divider"></div>
+    <div class="ui fluid labeled input field">
+        <div id="form_label" class="ui label">
+            Content
+          </div>
+      <textarea name="blog[body]" id="content" rows="7" required></textarea>
+    </div>
+    <div class="ui hidden divider"></div>
+    <div class="ui buttons">
+      <a class="ui button" href="/blogs">Cancel</a>
+      <div class="or"></div>
+      <input class="ui primary button" type="submit" value="Save">
+    </div>
+  </form>
+</div>
+
+<% include ./partials/footer %>
